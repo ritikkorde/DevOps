@@ -1,2 +1,3 @@
-<h1>DevOps Notes</h1>
-1) **what is devops**
+<h3>DevOps Notes</h3>
+
+ **1)what is devops**
