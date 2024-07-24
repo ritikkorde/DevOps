@@ -1,10 +1,5 @@
 # Jenkins
-- CI & CD -Continuous integrtion / continuous deliverY and continous deployment
-- what is ci & cd?
-- methodology
-- automated
-- 3)ci= Continuous build and continuous test
-CI/  integration tools= jenkins,Bamboo(altasian), tranis CI,Build bot
+- 
 
 #  jenkins is the  heart of software development life cycle
 - jenkin is an open source,project written in JAVA that run windows ,MacOS,and other unix-like Operating system
