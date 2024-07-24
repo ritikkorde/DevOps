@@ -6,6 +6,7 @@ Jenkins is a Java-based open-source automation platform with plugins designed fo
 Jenkins software’s popularity stems from its ability to track and monitor repetitive activities that emerge throughout a project’s development. For example, if your team is working on a project, Jenkins will continually test your builds and alert you to any mistakes early in the process
 #  Jenkins is the  heart of software development life cycle
 - jenkin is an open source,project written in JAVA that run windows ,MacOS,and other unix-like Operating system
+- It helps automate the parts of software development related to building, testing, and deploying, facilitating DevOps practices.
 - it is free
 - strong community support
 - lost off plugins are available
