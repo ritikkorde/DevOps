@@ -2,6 +2,13 @@
 
 Continuous Integration (CI) and Continuous Delivery/Deployment (CD) are practices in software development that automate the processes of software testing, building, and deploying. Here's a simple explanation of their differences:
 
+CI & CD -Continuous integrtion / continuous deliverY and continous deployment
+- what is ci & cd?
+- methodology
+- automated
+- 3)ci= Continuous build and continuous test
+CI/  integration tools= jenkins,Bamboo(altasian), tranis CI,Build bot
+
 ## Continuous Integration (CI)
 
 1. **Definition**: CI is the practice of automatically integrating code changes from multiple contributors into a shared repository several times a day.
