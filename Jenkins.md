@@ -1,7 +1,10 @@
 # Jenkins
-- 
+Jenkins is an open-source solution comprising an automation server to enable continuous integration and continuous delivery (CI/CD), automating the various stages of software development such as build, test, and deployment. 
 
-#  jenkins is the  heart of software development life cycle
+Jenkins is a Java-based open-source automation platform with plugins designed for continuous integration. It is used to continually create and test software projects, making it easier for developers and DevOps engineers to integrate changes to the project and for consumers to get a new build. 
+# What Is Jenkins Used For?
+Jenkins software’s popularity stems from its ability to track and monitor repetitive activities that emerge throughout a project’s development. For example, if your team is working on a project, Jenkins will continually test your builds and alert you to any mistakes early in the process
+#  Jenkins is the  heart of software development life cycle
 - jenkin is an open source,project written in JAVA that run windows ,MacOS,and other unix-like Operating system
 - it is free
 - strong community support
