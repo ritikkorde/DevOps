@@ -14,5 +14,5 @@ containerizations is a lightweight form of virtulization that allow you to encap
   - envionment
   - configs
 **A hypervisor** is software that allows multiple virtual machines (VMs) to run on a single physical computer
-  Docker image =is actually excutable file(in file instruction to how container created )
+Docker image =is actually excutable file(in file instruction to how container created )
  - image is basically like static screenshot or static snapshot of what the code 
