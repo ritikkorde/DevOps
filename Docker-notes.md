@@ -3,6 +3,7 @@ Docker is a Containerization platform for packaging,deploying and running applic
 **Containerization**
 containerizations is a lightweight form of virtulization that allow you to encapsulate an application and its dependencies into a self-contained unit called a "Container"
 1)Container
+A Docker container is a software package that contains everything needed to run an application, including the application's code and its dependencies.
 - container is like virtual machine
 - docker is tool which create container
 - portable (easy to share one computer to another,code as well as dependencies)
@@ -14,5 +15,8 @@ containerizations is a lightweight form of virtulization that allow you to encap
   - envionment
   - configs
 **A hypervisor** is software that allows multiple virtual machines (VMs) to run on a single physical computer
+**Docker image**
+Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
+
 Docker image =is actually excutable file(in file instruction to how container created )
  - image is basically like static screenshot or static snapshot of what the code 
