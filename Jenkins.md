@@ -70,7 +70,10 @@ Finally, you install Jenkins using:
 - **sudo apt insatll jenkins**
 - you can check the service status of your jenkins tool using cmd
 - **systemctl status jenkins**
+- **ps -ef | grep jenkins**
 - Access jenkins to web hit your public IP to web browser with port 8080(https://ip:8080)
 - this directory can shown your admin password required for login jenkins  **/var/lib/jenkins/secrets/intialAdminPassword**
 - setup jenkins
 - start using jenkins.
+
+
