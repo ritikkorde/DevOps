@@ -20,3 +20,6 @@ Docker container image is a lightweight, standalone, executable package of softw
 
 Docker image =is actually excutable file(in file instruction to how container created )
  - image is basically like static screenshot or static snapshot of what the code 
+<div>
+<img w=500,h=300 src=https://www.google.com/url?sa=i&url=https%3A%2F%2Fdocs.docker.com%2Fget-started%2Fdocker_cheatsheet.pdf&psig=AOvVaw3fWZzVp6QMDLfMGYV12BIp&ust=1723113717509000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOj3zfjY4ocDFQAAAAAdAAAAABAR>
+</div>
