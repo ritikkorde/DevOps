@@ -40,7 +40,7 @@ Docker container image is a lightweight, standalone, executable package of softw
  
 https://docs.docker.com/get-started/docker_cheatsheet.pdf
 <div>
-<img width=500 height=300 src=https://www.google.com/url?sa=i&url=https%3A%2F%2Fdocs.docker.com%2Fget-started%2Fdocker_cheatsheet.pdf&psig=AOvVaw3fWZzVp6QMDLfMGYV12BIp&ust=1723113717509000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOj3zfjY4ocDFQAAAAAdAAAAABAR >
+<img width=500 height=300 src=https://www.google.com/imgres?q=docker%20cheatsheet&imgurl=https%3A%2F%2Fraw.githubusercontent.com%2Fsangam14%2Fdockercheatsheets%2Fmaster%2Fdockercheatsheet8.png&imgrefurl=https%3A%2F%2Fdockerlabs.collabnix.com%2Fdocker%2Fcheatsheet%2F&docid=7hB1JOR3fNsCmM&tbnid=g9CB8-d0fCaYcM&vet=12ahUKEwjgstvYwOOHAxVAUGwGHTkjLKkQM3oECBYQAA..i&w=1259&h=832&hcb=2&ved=2ahUKEwjgstvYwOOHAxVAUGwGHTkjLKkQM3oECBYQAA >
 </div>
 
 **A hypervisor** is software that allows multiple virtual machines (VMs) to run on a single physical computer
