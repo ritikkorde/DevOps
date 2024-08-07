@@ -37,6 +37,18 @@ Docker container image is a lightweight, standalone, executable package of softw
 
 - Docker image =is actually excutable file(in file instruction to how container created )
 - image is basically like static screenshot or static snapshot of what the code
+<h2>Dockerfile</h2>
+- Docker can build images automatically by reading the instructions from a Dockerfile.
+- A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image.
+
+
+
+https://docs.docker.com/reference/dockerfile/
+
+
+
+
+
  
 https://docs.docker.com/get-started/docker_cheatsheet.pdf
 <div>
