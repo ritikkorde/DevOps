@@ -76,4 +76,73 @@ Finally, you install Jenkins using:
 - setup jenkins
 - start using jenkins.
 
+<h3>Tutorials for study jenkins</h3>
+1) https://medium.com/cloud-native-daily/jenkins-tutorial-basics-to-advanced-for-devops-engineer-27265e5ae67d
 
+<h3>Deploy java-web-app with github-jenkins-maven and tomcat</h3>
+https://medium.com/@mudasirhaji/deploy-a-java-web-app-with-github-jenkins-maven-and-tomcat-on-aws-step-by-step-process-f813c11c9930
+
+<h3>Add jenkins slave node</h3> 
+https://chathura-siriwardhana.medium.com/step-by-step-guide-to-add-jenkins-slave-nodes-f2e756c8849e
+
+<h3>What is end to end testing ?(Lambdatest)</h3>
+https://www.lambdatest.com/learning-hub/end-to-end-testing
+- #!/usr/bin/env groovy
+
+node {
+    withEnv(["LT_USERNAME=Your LambdaTest UserName",
+    "LT_ACCESS_KEY=Your LambdaTest Access Key",
+    "LT_TUNNEL=true"]) {
+ 
+        echo env.LT_USERNAME
+        echo env.LT_ACCESS_KEY 
+        
+        stage('setup') { 
+            // Get some code from a GitHub repository
+            try {
+                git 'https://github.com/LambdaTest/nightwatch-selenium-sample.git'
+                
+                // Download Tunnel Binary from the updated URL
+                sh "wget https://downloads.lambdatest.com/tunnel/linux/64bit/LT_Linux.zip"
+                
+                // Download standalone unzip binary
+                sh 'wget https://github.com/jcupitt/unzip-release/releases/download/v1.0/unzip-linux64 -O unzip'
+                sh 'chmod +x unzip'
+                
+                // Use standalone unzip binary to unzip the file
+                sh './unzip -o LT_Linux.zip'
+                
+                // Starting Tunnel Process 
+                sh "./LT -user ${env.LT_USERNAME} -key ${env.LT_ACCESS_KEY} &"
+                sh  "rm -rf LT_Linux.zip unzip"
+            } catch (err) {
+                echo err.toString()
+            }
+        }
+        
+        stage('build') {
+            // Installing Dependencies
+            sh 'npm install'
+        }
+        
+        stage('test') {
+            try {
+                sh './node_modules/.bin/nightwatch -e chrome,edge tests'
+            } catch (err) {
+                echo err.toString()
+            }
+        }
+        
+        stage('end') {  
+            echo "Success"
+        }
+    }
+}
+
+<h1>Jenkins Pipeline</h1>
+tutorial for setup jenkins pipeline
+- https://medium.com/@riteshshetty123/best-jenkins-pipeline-tutorial-for-beginners-examples-4c8a195876e6
+
+<h2>Build process</h2>
+tutorial for build java-app with maven (error in maven version not supported)
+- https://www.jenkins.io/doc/tutorials/build-a-java-app-with-maven/
