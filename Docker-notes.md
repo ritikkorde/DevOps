@@ -122,20 +122,20 @@ https://medium.com/@anshita.bhasin/a-step-by-step-guide-to-create-dockerfile-9e3
 <h2>Build Docker Image</h2>
 Once you have finished building your Dockerfile, you can build the image by running the below command from the Terminal :
 
-- docker build -t (image_name> (-t for tag the image) Or (docker image build .)
-- docker images (list of all docker images)
-- docker rmi (image name> (delete an image) 
-- docker login -u (usename> (to login docker deskstop to docker engine )
+- **docker build -t (image_name>** (-t for tag the image) Or (docker image build .)
+- **docker images** (list of all docker images)
+- **docker rmi (image name>** (delete an image) 
+- **docker login -u (usename>** (to login docker deskstop to docker engine )
 - push docker image .(before push image firstly you tag the image)
-- docker tag imagename:tag username/imagename:tag (after that you can push image)
-- docker push username/imagename:tag
-- docker pull (image name > (pull an image from a docker hub)
-- docker run --name (container_name> (image_name> (Create and run a container from an image, with a custom name)
-- docker run -d (image name> (run container in background)
-- docker inspect (container name> (to inspect container all details)
-- docker exec -it (container name> shell(/bin/bash> (to open a shell inside the running container)
--  docker ps -a (list all containers)
--  docker start /stop (container name> (start or stop existing container)
+- **docker tag imagename:tag username/imagename:tag** (after that you can push image)
+- **docker push username/imagename:tag**
+- **docker pull (image name >** (pull an image from a docker hub)
+- **docker run --name (container_name> (image_name>** (Create and run a container from an image, with a custom name)
+- **docker run -d (image name>** (run container in background)
+- **docker inspect (container name>** (to inspect container all details)
+- **docker exec -it (container name> shell(/bin/bash>** (to open a shell inside the running container)
+-  **docker ps -a** (list all containers)
+-  **docker start /stop (container name>** (start or stop existing container)
 - 
 - 
 - 
