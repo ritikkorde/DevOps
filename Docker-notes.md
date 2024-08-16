@@ -27,6 +27,9 @@ A Docker container is a software package that contains everything needed to run 
   - envionment
   - configs
 
+<h2>docker images vs container</h2>
+A Docker image contains the basic package, the application configuration, and the dependencies. A Docker container is a deployed and running Docker image. In other words, it is an instance of a docker image
+
 <h3>What is Docker Image?</h3>
 It is a executable file, comprised of multiple layers, used to execute code in a Docker container. 
 
