@@ -18,3 +18,7 @@ i)Kubelet
 - Observe and manage the pods(how many container should there be in a pod)
 - kubelet ensures that the desired state of the containers as defined by master kubelet sees and control all these things
 - 
+
+ii) Kube-Proxy
+- All networking should be done by kube-proxy
+- Assigning ip adress to to pod
