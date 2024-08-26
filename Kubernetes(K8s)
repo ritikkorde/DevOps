@@ -1,1 +1,20 @@
- Kubernetes
+ Kubernetes /K8s
+is an open source platform designed to automate the deployment,scaling and management of containerized application/containers.
+Container Orchestration /container management tool- Kubernetes manages clusters of containers,ensuring they run efficiently across multiple machine.
+Features of K8s
+- Container orchestration 
+- automated scaling
+- Self -Healing
+- service Discovery & Load balancing
+- Storage Orchestration: Kubernetes allows you to automatically mount the storage system of your choice, whether from local storage, cloud providers, or network storage systems.
+- Automated Rollouts & Rollbacks: Kubernetes can manage the deployment of new versions of applications without downtime, and roll back to previous versions if something goes wrong.
+
+Architecture of K8s
+1)Kubernetes only manage pods not container
+2)Worker node/minion
+i)Kubelet
+- kubelet is the agent running on node
+- kubelet communicate the controller manager through API server & send all information to master .
+- Observe and manage the pods(how many container should there be in a pod)
+- kubelet ensures that the desired state of the containers as defined by master kubelet sees and control all these things
+- 
