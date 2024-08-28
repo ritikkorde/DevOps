@@ -60,5 +60,13 @@ kubelet is the agent running on each node that ensure container are running in a
 it communicate with the control plane and receive instruction about which pods to run on the node.
 
 kube proxy 
-kube  proxy maintain network rules on nodes 
+kube  proxy maintain network rules on nodes ,assigning ip adress and configuring load balancer.
 allowing communication between pods and services within the cluster
+
+Container runtime engine
+this is the software resposible for running the container
+and manage container image on node 
+
+Pods 
+pods are the smallest deployable units
+the group of one or more conatainer with shared storage and network resources and specification how to run the containers
