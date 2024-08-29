@@ -70,3 +70,7 @@ and manage container image on node
 Pods 
 pods are the smallest deployable units
 the group of one or more conatainer with shared storage and network resources and specification how to run the containers
+
+
+
+same version of cluster and  ectl and kubectl
