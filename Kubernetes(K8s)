@@ -74,3 +74,6 @@ the group of one or more conatainer with shared storage and network resources an
 
 
 same version of cluster and  ectl and kubectl
+
+1st install kubctl
+eksctl
