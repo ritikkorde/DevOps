@@ -77,3 +77,8 @@ same version of cluster and  ectl and kubectl
 
 1st install kubctl
 eksctl
+
+
+deployment used for stateless application
+statefullset are used for stateful application
+ 
