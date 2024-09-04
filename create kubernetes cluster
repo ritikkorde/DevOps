@@ -1,0 +1,42 @@
+firstly to create IAM role for access the eks service for ec2
+    policy attach in role
+1)AmazonEKSClusterPolicy - Provides basic EKS cluster permissions.
+2)AmazonEKSWorkerNodePolicy - Provides permissions required by EKS worker nodes.
+3)AmazonEC2ContainerRegistryReadOnly - (Optional) Provides read-only access to Amazon ECR repositories. This is necessary if you pull images from ECR.
+4)AmazonEKS_CNI_Policy - Provides permissions for the EKS CNI plugin.
+
+      firstly to create ec2 machine with best practice and attach IAM role to instance
+      and connect with ssh
+After that  configure the AWS with AWS cli
+      firstly to install aws cli in 
+      2) AWS configure 
+      with access id and secret access key
+
+ Create an EKS Cluster
+Command for creating cluster
+eksctl create cluster --name my-cluster --region us-west-2 --nodegroup-name linux-nodes --node-type t3.medium --nodes 3 --nodes-min 1 --nodes-max 4 --managed
+
+# Update kubeconfig to Connect to the EKS Cluster
+
+aws eks --region your-cluster-region update-kubeconfig --name your-cluster-name
+
+Verify the EKS Cluster
+
+eksctl get cluster --name my-cluster --region us-west-2
+
+        For creating deployment 
+kubectl create deployment nginx --image=nginx --namespace=demo-ns
+kubectl get deployment
+for creating namespace 
+          kubectl create ns demo-namespace
+          kubectl get ns
+          kubectl get pod 
+          kubectl get pod -o yaml --to view yaml file
+          kubectl apply -f .yml -- to create deployment from manifest
+
+Let's update the nginx Pods to use the nginx:1.16.1 image instead of the nginx:1.14.2 image.
+
+kubectl set image deployment.v1.apps/nginx-deployment nginx=nginx:1.16.1          
+ 
+        
+  
