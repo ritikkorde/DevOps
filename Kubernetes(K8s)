@@ -81,4 +81,4 @@ eksctl
 
 deployment used for stateless application
 statefullset are used for stateful application
- 
+  by defualt objects communicate services through headless services
