@@ -82,3 +82,54 @@ eksctl
 deployment used for stateless application
 statefullset are used for stateful application
   by defualt objects communicate services through headless services
+
+1. Deployment
+Purpose: To manage stateless applications.
+How It Works: A Deployment ensures that a specified number of pod replicas are running at all times. If a pod crashes or is deleted, the Deployment controller will automatically create a new pod to replace it.
+Use Case: Ideal for scalable, stateless applications like web servers, where the state doesn't need to be preserved across restarts.
+
+2. StatefulSet
+Purpose: To manage stateful applications.
+How It Works: Unlike Deployments, StatefulSets ensure that each pod has a unique, stable identity and persistent storage. Pods in a StatefulSet are created and destroyed in a specific order, and each pod gets a stable network identity and storage that persists across rescheduling.
+Use Case: Ideal for applications that require stable, persistent storage and network identities, like databases (e.g., MySQL, MongoDB) or distributed systems.
+
+3. DaemonSet
+Purpose: To ensure that a copy of a pod runs on all (or specific) nodes in the cluster.
+How It Works: A DaemonSet automatically deploys a pod on every node in the cluster (or a subset of nodes if specified). If new nodes are added to the cluster, the DaemonSet ensures that the pod is also deployed on the new nodes.
+Use Case: Ideal for background system services like logging agents, monitoring daemons, or network plugins that need to run on every node.
+
+Summary
+Deployment: Use for stateless applications where you need to scale and manage pods easily.
+
+StatefulSet: Use for stateful applications where each pod needs a unique identity and stable storage.
+
+DaemonSet: Use when you need to run a specific pod on every node in the cluster
+
+
+
+In Kubernetes, exposing a pod means making it available to the cluster through a service:
+
+Service
+A service groups a set of pod endpoints into a single resource and defines a policy for accessing them.
+
+ClusterIP
+The default service type that exposes the service on an internal IP address, making it only accessible from within the cluster.
+
+NodePort
+Exposes the service on the same port of each selected node in the cluster, making it accessible from outside the cluster
+
+n Kubernetes, the term "expose" refers to making a service or an application accessible to the network. This can mean exposing the service internally within the cluster or externally to the outside world. When you expose a Kubernetes service, you define how the service will be accessed, whether it's from within the cluster, from other services, or from external users.
+
+Here are the common ways to expose a service in Kubernetes:
+
+ClusterIP: This is the default type. It exposes the service on an internal IP within the cluster. This means the service is only accessible from within the cluster.
+
+NodePort: This type exposes the service on a static port on each node’s IP. The service becomes accessible from outside the cluster using the <NodeIP>:<NodePort> combination.
+
+LoadBalancer: This type exposes the service externally using a cloud provider’s load balancer. It automatically provisions a load balancer for the service and directs traffic to the service through it.
+
+ExternalName: This type maps the service to the contents of an external DNS name, returning a CNAME record with the name.
+
+
+    kubectl expose deployment/my-nginx
+
