@@ -9,21 +9,9 @@ Features of K8s
 - Storage Orchestration: Kubernetes allows you to automatically mount the storage system of your choice, whether from local storage, cloud providers, or network storage systems.
 - Automated Rollouts & Rollbacks: Kubernetes can manage the deployment of new versions of applications without downtime, and roll back to previous versions if something goes wrong.
 
-Architecture of K8s
-1)Kubernetes only manage pods not container
-2)Worker node/minion
-i)Kubelet
-- kubelet is the agent running on node
-- kubelet communicate the controller manager through API server & send all information to master .
-- Observe and manage the pods(how many container should there be in a pod)
-- kubelet ensures that the desired state of the containers as defined by master kubelet sees and control all these things
-- 
-
-ii) Kube-Proxy
-- All networking should be done by kube-proxy
-- Assigning ip adress to to pod
-
 A Kubernetes cluster is a group of nodes that run containerized applications and are managed by the Kubernetes control plane
+
+https://medium.com/cloud-native-daily/a-comprehensive-kubernetes-overview-unleash-the-power-of-kubernetes-dc3e2e3d5630
 Architecture of kubernetes 
 in this architecture kubernetes has two main plane one is control plane and another is worker plane
 1) the control plane is responsible for managing the kubernetes cluster
@@ -80,15 +68,19 @@ deployment used for stateless application
 statefullset are used for stateful application
   by defualt objects communicate services through headless services
 
+Object of K8s
 1. Deployment
 Purpose: To manage stateless applications.
 How It Works: A Deployment ensures that a specified number of pod replicas are running at all times. If a pod crashes or is deleted, the Deployment controller will automatically create a new pod to replace it.
 Use Case: Ideal for scalable, stateless applications like web servers, where the state doesn't need to be preserved across restarts.
+https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/
 
 2. StatefulSet
 Purpose: To manage stateful applications.
 How It Works: Unlike Deployments, StatefulSets ensure that each pod has a unique, stable identity and persistent storage. Pods in a StatefulSet are created and destroyed in a specific order, and each pod gets a stable network identity and storage that persists across rescheduling.
 Use Case: Ideal for applications that require stable, persistent storage and network identities, like databases (e.g., MySQL, MongoDB) or distributed systems.
+
 
 3. DaemonSet
 Purpose: To ensure that a copy of a pod runs on all (or specific) nodes in the cluster.
@@ -106,7 +98,7 @@ DaemonSet: Use when you need to run a specific pod on every node in the cluster
 
 In Kubernetes, exposing a pod means making it available to the cluster through a service:
 
-Service
+#Services
 A service groups a set of pod endpoints into a single resource and defines a policy for accessing them.
 
 ClusterIP
@@ -127,6 +119,15 @@ LoadBalancer: This type exposes the service externally using a cloud provider’
 
 ExternalName: This type maps the service to the contents of an external DNS name, returning a CNAME record with the name.
 
+Headless
+
 
     kubectl expose deployment/my-nginx
+
+Labels and selectors--
+
+Taints And toleration--
+
+
+
 
