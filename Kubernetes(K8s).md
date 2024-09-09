@@ -12,7 +12,9 @@ Features of K8s
 A Kubernetes cluster is a group of nodes that run containerized applications and are managed by the Kubernetes control plane
 
 https://medium.com/cloud-native-daily/a-comprehensive-kubernetes-overview-unleash-the-power-of-kubernetes-dc3e2e3d5630
-Architecture of kubernetes 
+
+#Architecture of kubernetes 
+
 in this architecture kubernetes has two main plane one is control plane and another is worker plane
 1) the control plane is responsible for managing the kubernetes cluster
 2) it make decision about the cluster,such as scheduling and monitoring the cluster state.
@@ -22,42 +24,43 @@ the main component of the control plane is
 - kube scheduler
 - controller manager
 - etcd
+
 API server
-The API server is the front end of the kubernetes control plane
-it is basically resposible for communication between control plane and worker plane
+- The API server is the front end of the kubernetes control plane
+- it is basically resposible for communication between control plane and worker plane
 and also updates the cluster state in etcd.
 
 kube schedule
-the scheduler assign the pods to nodes based on resources availability
-it handle pod creation and management
+- the scheduler assign the pods to nodes based on resources availability
+- it handle pod creation and management
 
 controller manager 
 - it is resposible for running controller processess.
-controller are resposible for maintaing the desired state of pods
+- controller are resposible for maintaing the desired state of pods
 
 etcd
-it store all metadata of cluster in key value format
-like configuration and state information
+- it store all metadata of cluster in key value format
+- like configuration and state information
 
 Worker plane
-the worker plane consist of worker node that run containerized application
-each worker node has essential component that communicate with the control plane
+- the worker plane consist of worker node that run containerized application
+- each worker node has essential component that communicate with the control plane
 
 Kubelet
-kubelet is the agent running on each node that ensure container are running in a pod.
-it communicate with the control plane and receive instruction about which pods to run on the node.
+- kubelet is the agent running on each node that ensure container are running in a pod.
+- it communicate with the control plane and receive instruction about which pods to run on the node.
 
 kube proxy 
-kube  proxy maintain network rules on nodes ,assigning ip adress and configuring load balancer.
-allowing communication between pods and services within the cluster
+- kube  proxy maintain network rules on nodes ,assigning ip adress and configuring load balancer.
+- allowing communication between pods and services within the cluster
 
 Container runtime engine
-this is the software resposible for running the container
-and manage container image on node 
+- this is the software resposible for running the container
+- and manage container image on node 
 
 Pods 
-pods are the smallest deployable units
-the group of one or more conatainer with shared storage and network resources and specification how to run the containers
+- pods are the smallest deployable units
+- the group of one or more conatainer with shared storage and network resources and specification how to run the containers
 
 
 
