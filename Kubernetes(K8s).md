@@ -193,10 +193,11 @@ Components of a Taint:
 
 Key: A label key that identifies the taint.
 Value: A value that provides additional information about the taint.
-Effect: The action to be taken by Kubernetes when a pod does not tolerate the taint.
-NoSchedule: Pods that don't tolerate the taint won't be scheduled on the node.
-PreferNoSchedule: Kubernetes will try not to schedule pods that don't tolerate the taint, but it's not guaranteed.
-NoExecute: Pods that don't tolerate the taint will be evicted from the node if they are already running there.
+Effect: The action to be taken by Kubernetes when a pod does not tolerate the taint
+
+- NoSchedule: Pods that don't tolerate the taint won't be scheduled on the node.
+- PreferNoSchedule: Kubernetes will try not to schedule pods that don't tolerate the taint, but it's not guaranteed.
+- NoExecute: Pods that don't tolerate the taint will be evicted from the node if they are already running there.
 Example:
 
 #kubectl taint nodes node1 key=value:NoSchedule
