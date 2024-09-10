@@ -234,4 +234,38 @@ Imagine you have a node dedicated to running only critical workloads. You might 
 
 This mechanism allows for fine-grained control over where workloads are placed in your Kubernetes cluster, helping to optimize resource usage and maintain reliability
 
+ConfigMap
+1. ConfigMaps
+Purpose: Store non-sensitive configuration data as key-value pairs that can be used by your Kubernetes applications.
+Use Cases:
+Store configuration settings (e.g., URLs, environment variables).
+Share configuration data across multiple pods without hardcoding them into your containers
 
+ConfigMaps allow you to store non-sensitive configuration data, such as environment variables, configuration files, or command-line arguments, in key-value pairs. These can then be injected into your applications running in Pods.
+-ConfigMaps allow you to store non-sensitive configuration data, such as environment variables, configuration files, or command-line arguments, in key-value pairs. These can then be injected into your applications running in Pods.
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-app-config
+data:
+  DATABASE_URL: "postgres://user:password@db:5432/mydb"
+  APP_ENV: "production
+
+2. Secrets:
+Purpose: Store sensitive information such as passwords, OAuth tokens, and SSH keys.
+Use Cases:
+Manage sensitive data that needs to be injected into pods.
+Avoid exposing sensitive information in your application code or ConfigMaps.
+
+
+Secrets are similar to ConfigMaps but are specifically designed to store sensitive data, like passwords, API tokens, or SSH keys. Secrets data is base64 encoded but still requires care in handling.
+●	Use case: You want to securely store sensitive information, such as a database password or API key.
+
+RBAC
+Purpose: Manage who can access Kubernetes resources and what actions they can perform.
+Components:
+- Role: Defines a set of permissions within a namespace.
+ClusterRole: Defines a set of permissions across the entire cluster.
+- RoleBinding: Grants the permissions defined in a Role to a user or group within a specific namespace.
+ClusterRoleBinding: Grants the permissions defined in a ClusterRole to a user or group across the entire cluster.
