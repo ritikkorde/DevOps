@@ -9,8 +9,38 @@ firstly to create IAM role for access the eks service for ec2
       and connect with ssh
 After that  configure the AWS with AWS cli
       firstly to install aws cli in 
-      2) AWS configure 
+1)$ sudo yum remove awscli
+2)sudo apt install curl unzip
+3)curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+4)unzip awscliv2.zip
+5)sudo ./aws/install
+6)aws --version
+2) AWS configure 
       with access id and secret access key
+
+Install eksctl
+1)# for ARM systems, set ARCH to: `arm64`, `armv6` or `armv7`
+- ARCH=amd64
+- PLATFORM=$(uname -s)_$ARCH
+
+- curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$PLATFORM.tar.gz"
+
+- # (Optional) Verify checksum
+- curl -sL "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_checksums.txt" | grep $PLATFORM | sha256sum --check
+
+- tar -xzf eksctl_$PLATFORM.tar.gz -C /tmp && rm eksctl_$PLATFORM.tar.gz
+
+- sudo mv /tmp/eksctl /usr/local/bin
+
+Install kubectl (v-1.30)
+- curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.30.2/2024-07-12/bin/linux/amd64/kubectl
+- sha256sum -c kubectl.sha256
+- openssl sha1 -sha256 kubectl
+- chmod +x ./kubectl(Apply execute permissions to the binary.)
+- mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$HOME/bin:$PATH
+- echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc(opt)
+- kubectl version --client
+- aws eks update-kubeconfig --region region-code --name my-cluster
 
  Create an EKS Cluster
 Command for creating cluster
@@ -21,7 +51,7 @@ eksctl create cluster --name my-cluster --region us-west-2 --nodegroup-name linu
 aws eks --region your-cluster-region update-kubeconfig --name your-cluster-name
 
 Verify the EKS Cluster
-
+kubectl config current-context
 eksctl get cluster --name my-cluster --region us-west-2
 
         For creating deployment 
