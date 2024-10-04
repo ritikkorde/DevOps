@@ -27,5 +27,7 @@ sudo apt update && sudo apt install terraform
 
 terraform  campared to resources available are not to terraform state file
 
+variable=
+#Terraform configurations can include variables to make your configuration more dynamic and flexible.
 
-
+ssh -i key-name ubuntu@publicip  (for ssh another instance to host)
